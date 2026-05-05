@@ -1,67 +1,81 @@
 <template>
   <div class="home">
     <section class="hero">
-      <div class="hero-bg">
-        <div class="grid-overlay"></div>
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-        <div class="glow-orb orb-3"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-orbs">
+        <div class="orb orb-cyan"></div>
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-pink"></div>
       </div>
+
       <div class="hero-content">
-        <div class="code-tag">&lt;div&gt;</div>
-        <h1 class="hero-title">
-          <span class="title-line">你好，我是</span>
-          <span class="title-name">谷佳豪</span>
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          AI TRAINER · CREATIVE SPIRIT
+        </div>
+        <h1 class="hero-name">
+          <span class="name-line">你好，我是</span>
+          <span class="name-main text-gradient">谷佳豪</span>
         </h1>
-        <div class="hero-tags">
-          <span class="tag">AI训练师</span>
-          <span class="tag-separator">|</span>
-          <span class="tag">动漫爱好者</span>
-          <span class="tag-separator">|</span>
-          <span class="tag">烹饪达人</span>
+        <div class="hero-roles">
+          <span class="role-chip">
+            <span class="role-icon">▸</span> AI 训练师
+          </span>
+          <span class="role-chip">
+            <span class="role-icon">▸</span> 动漫爱好者
+          </span>
+          <span class="role-chip">
+            <span class="role-icon">▸</span> 烹饪达人
+          </span>
         </div>
-        <p class="hero-description">
-          一个将科技与艺术完美结合的斜杠青年。在工作中，我是严谨专业的AI训练师；
-          私下里，我是会为了一道美食等上几个小时的料理爱好者，
-          也是一个会被动漫情节感动落泪的理想主义者。
+        <p class="hero-desc">
+          将科技逻辑与生活美学融为一体的斜杠青年。<br />
+          在工作中训练 AI，在动漫里寻找热血，在厨房中创作美味。
         </p>
-        <div class="hero-buttons">
-          <router-link to="/about" class="btn btn-primary">
+        <div class="hero-actions">
+          <router-link to="/about" class="btn-primary">
             <span>了解更多</span>
-            <span class="btn-icon">→</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </router-link>
-          <router-link to="/hobbies" class="btn btn-secondary">
+          <router-link to="/hobbies" class="btn-secondary">
             <span>我的兴趣</span>
-            <span class="btn-icon">◇</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
           </router-link>
         </div>
-        <div class="code-tag code-tag-end">&lt;/div&gt;</div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
       </div>
     </section>
 
-    <section class="quick-intro">
+    <section class="features">
       <div class="container">
-        <h2 class="section-title">
-          <span class="title-accent">//</span> 快速了解我
-        </h2>
-        <div class="intro-cards">
-          <router-link to="/skills" class="intro-card">
-            <div class="card-icon">🎓</div>
+        <div class="features-header">
+          <span class="section-tag">Overview</span>
+          <h2 class="section-heading">快速了解我</h2>
+        </div>
+        <div class="features-grid">
+          <router-link to="/skills" class="feature-card glow-card">
+            <div class="feature-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
             <h3>专业背景</h3>
-            <p>专注于机器学习和深度学习模型的训练与优化，致力于将AI技术应用于实际场景</p>
-            <div class="card-line"></div>
+            <p>专注于机器学习和深度学习模型的训练与优化，致力于将 AI 技术应用于实际场景</p>
           </router-link>
-          <router-link to="/hobbies" class="intro-card">
-            <div class="card-icon">🎬</div>
+          <router-link to="/hobbies" class="feature-card glow-card">
+            <div class="feature-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            </div>
             <h3>动漫热爱</h3>
-            <p>沧元图、剑来、仙逆、凡人修仙传...沉迷于玄幻世界的热血与感动</p>
-            <div class="card-line"></div>
+            <p>沧元图、剑来、仙逆、凡人修仙传… 沉迷玄幻世界的热血与感动</p>
           </router-link>
-          <router-link to="/hobbies" class="intro-card">
-            <div class="card-icon">👨‍🍳</div>
+          <router-link to="/hobbies" class="feature-card glow-card">
+            <div class="feature-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>
+            </div>
             <h3>生活乐趣</h3>
             <p>喜欢做家常菜，也是忠实的铲屎官，享受烹饪和撸狗的悠闲时光</p>
-            <div class="card-line"></div>
           </router-link>
         </div>
       </div>
@@ -72,315 +86,319 @@
 <style scoped>
 .home {
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
+/* Hero */
 .hero {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #000D21 0%, #001A3D 100%);
-  overflow: hidden;
-  padding: 2rem;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
+  padding: 6rem 2rem 4rem;
   overflow: hidden;
 }
 
-.grid-overlay {
+.hero-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0, 102, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 102, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(0, 229, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 40%, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 40%, black 30%, transparent 70%);
 }
 
-.glow-orb {
+.hero-orbs {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
+  filter: blur(120px);
 }
 
-.orb-1 {
-  width: 400px;
-  height: 400px;
-  background: #0066FF;
-  top: -100px;
-  right: -100px;
-  animation: float 8s ease-in-out infinite;
+.orb-cyan {
+  width: 600px;
+  height: 600px;
+  background: rgba(0, 229, 255, 0.06);
+  top: -250px;
+  right: -200px;
+  animation: float 12s ease-in-out infinite;
 }
 
-.orb-2 {
-  width: 300px;
-  height: 300px;
-  background: #00D4FF;
-  bottom: -50px;
-  left: -50px;
+.orb-purple {
+  width: 500px;
+  height: 500px;
+  background: rgba(179, 71, 234, 0.05);
+  bottom: -200px;
+  left: -200px;
   animation: float 10s ease-in-out infinite reverse;
 }
 
-.orb-3 {
-  width: 200px;
-  height: 200px;
-  background: #00F5FF;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse 6s ease-in-out infinite;
+.orb-pink {
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 45, 149, 0.04);
+  top: 40%;
+  left: 55%;
+  animation: float 14s ease-in-out infinite;
 }
 
 @keyframes float {
   0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(30px, -30px); }
-}
-
-@keyframes pulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
-  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.2; }
+  33% { transform: translate(40px, -30px); }
+  66% { transform: translate(-20px, 20px); }
 }
 
 .hero-content {
-  text-align: center;
-  color: white;
-  z-index: 10;
-  max-width: 800px;
   position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 720px;
 }
 
-.code-tag {
-  font-family: 'Courier New', monospace;
-  color: #00D4FF;
-  font-size: 1.2rem;
-  opacity: 0.6;
-  margin-bottom: 1rem;
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--cyan);
+  padding: 0.35rem 1rem;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  background: rgba(0, 229, 255, 0.04);
 }
 
-.code-tag-end {
-  margin-top: 2rem;
-  margin-bottom: 0;
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  animation: glowPulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px var(--cyan-glow);
 }
 
-.hero-title {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+.hero-name {
+  margin-bottom: 1.75rem;
 }
 
-.title-line {
+.name-line {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   margin-bottom: 0.5rem;
 }
 
-.title-name {
-  background: linear-gradient(135deg, #00D4FF 0%, #00F5FF 50%, #FFFFFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 60px rgba(0, 212, 255, 0.5);
+.name-main {
+  font-size: 5.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+  filter: drop-shadow(0 0 30px rgba(179, 71, 234, 0.3));
 }
 
-.hero-tags {
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-roles {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-.tag {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.1rem;
-  padding: 0.3rem 0;
+.role-chip {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.35rem 1.1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-card);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-base);
 }
 
-.tag-separator {
-  color: #00D4FF;
-  opacity: 0.5;
+.role-chip:hover {
+  border-color: var(--border-glow);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-glow-cyan);
 }
 
-.hero-description {
-  font-size: 1.15rem;
+.role-icon {
+  color: var(--cyan);
+  font-size: 0.7rem;
+}
+
+.hero-desc {
+  font-size: 1rem;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 2.5rem;
-  max-width: 650px;
+  color: var(--text-muted);
+  margin-bottom: 2.75rem;
+  max-width: 520px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.hero-buttons {
+.hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.btn {
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+.btn-primary,
+.btn-secondary {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-icon {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.btn:hover .btn-icon {
-  transform: translateX(5px);
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 550;
+  transition: all var(--transition-base);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0066FF 0%, #00D4FF 100%);
+  background: var(--gradient-mixed);
+  background-size: 200%;
   color: white;
-  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.4);
+  animation: gradientShift 4s ease infinite;
+  position: relative;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 102, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(179, 71, 234, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-card);
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.6);
-  transform: translateY(-3px);
+  border-color: var(--border-glow);
+  background: rgba(0, 229, 255, 0.06);
+  box-shadow: var(--shadow-glow-cyan);
 }
 
-.quick-intro {
-  padding: 5rem 2rem;
-  background: linear-gradient(180deg, #001A3D 0%, #000D21 100%);
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.container {
-  max-width: 1200px;
+.scroll-line {
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--cyan), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; height: 48px; }
+  50% { opacity: 1; height: 56px; }
+}
+
+/* Features */
+.features {
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: white;
-  margin-bottom: 3rem;
-  font-weight: 600;
-}
-
-.title-accent {
-  color: #00D4FF;
-  opacity: 0.6;
-}
-
-.intro-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.intro-card {
-  background: rgba(0, 102, 255, 0.05);
-  padding: 2.5rem;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 212, 255, 0.1);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+.feature-card {
+  padding: 2.25rem;
   text-decoration: none;
-  display: block;
+  color: inherit;
   cursor: pointer;
 }
 
-.intro-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #0066FF 0%, #00D4FF 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.intro-card:hover {
-  transform: translateY(-8px);
-  background: rgba(0, 102, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 102, 255, 0.15);
-}
-
-.intro-card:hover::before {
-  opacity: 1;
-}
-
-.card-icon {
-  font-size: 3rem;
+.feature-icon-wrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(0, 229, 255, 0.08);
+  color: var(--cyan);
   margin-bottom: 1.5rem;
+  transition: all var(--transition-base);
 }
 
-.intro-card h3 {
-  color: white;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+.feature-card:hover .feature-icon-wrap {
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
 }
 
-.intro-card p {
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.7;
-  font-size: 1rem;
+.feature-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
 }
 
-.card-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 255, 0.3) 50%, transparent 100%);
+.feature-card p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-muted);
 }
 
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
+  .name-main {
+    font-size: 3.2rem;
   }
 
-  .title-line {
-    font-size: 1.2rem;
+  .hero-desc br {
+    display: none;
   }
 
-  .hero-description {
-    font-size: 1rem;
+  .features {
+    padding: 4rem 1.25rem;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .intro-cards {
+  .features-grid {
     grid-template-columns: 1fr;
   }
 }
